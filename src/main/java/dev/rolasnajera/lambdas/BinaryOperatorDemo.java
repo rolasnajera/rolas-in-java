@@ -1,5 +1,7 @@
 package dev.rolasnajera.lambdas;
 
+import dev.rolasnajera.Person;
+
 import java.util.function.BinaryOperator;
 
 public class BinaryOperatorDemo {
