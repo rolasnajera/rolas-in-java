@@ -1,4 +1,6 @@
 package dev.rolasnajera.lambdas;
+import dev.rolasnajera.Person;
+
 import java.util.function.IntSupplier;
 import java.util.function.Predicate;
 import java.util.function.Supplier;
@@ -14,7 +16,7 @@ public class PredicateDemo {
         IntSupplier intSupplier = () -> (int)(Math.random() * 10);
         // before using a random supplier the lambda was to validate to be greater than 18
         //Predicate<Person> predicate = p -> p.age >= 18;
-        Predicate<Person> predicate = p -> p.age >= intSupplier.getAsInt();
+        Predicate<Person> predicate = p -> p.getAge() >= intSupplier.getAsInt();
 
         if(PredicateDemo.isPersonEligibleForADrink(supplier, predicate))
             System.out.println("Yep, take a drink!");
